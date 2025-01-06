@@ -1,0 +1,29 @@
+.para3{
+    background-color: blueviolet;
+    text-align: justify;
+    margin: 10px 10px 20px 20px;
+    border: 10px solid red;
+    padding: 20px;
+}
+
+.heading{
+    font-family: 'Franklin Gothic Medium';
+    margin-top: 50px;
+    font-style: oblique;
+    
+}
+
+
+#css_id{
+    font-family:'Franklin Gothic Medium';
+}
+
+*{
+    background-color: rgb(140, 158, 158);
+}
+
+.animeDiv{
+    background-image: url('/images/pres.jpg');    
+
+    
+}
