@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Table</title>
+
+    <link rel="stylesheet" href="./styles/nav.css">
+
+    <style>
+        td,
+        th {
+            border: 1px solid black;
+            padding: 5px 10px;
+        }
+
+        table {
+            border-collapse: collapse;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <nav>
+            <ul>
+                <!-- li*4>a -->
+                <li><a href="audVid.html" target="_blank">Video</a></li>
+                <li><a href="form.html" target="_blank">Form</a></li>
+                <li><a href="table.html" target="_blank">Table</a></li>
+                <li><a href="blog.html" target="_blank">Blog</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>HTML Table</h1>
+        <table>
+            <caption>
+                Employee Salary Sheet
+            </caption>
+            <thead>
+                <tr>
+                    <th>No.</th>
+                    <th>Full Name</th>
+                    <th>Position</th>
+                    <th>Salary</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Bill Gates</td>
+                    <td>Founder Microsoft</td>
+                    <td>$1000</td>
+                </tr>
+
+                <tr>
+                    <td>2</td>
+                    <td>Steve Jobs</td>
+                    <td>Founder Apple</td>
+                    <td>$1200</td>
+                </tr>
+
+                <tr>
+                    <td>3</td>
+                    <td>Larry Page</td>
+                    <td>Founder Google</td>
+                    <td>$1100</td>
+                </tr>
+
+                <tr>
+                    <td>4</td>
+                    <td>Mark Zuckerberg</td>
+                    <td>Founder Facebook</td>
+                    <td>$1300</td>
+                </tr>
+
+            </tbody>
+
+            <tfoot>
+                <tr>
+                    <td colspan="2">Total Employees = 4</td>
+                    <td colspan="2">Total Salary = $4600</td>
+                </tr>
+            </tfoot>
+        </table>
+
+        <ul>
+            <li>Table : table</li>
+            <li>table head : thead</li>
+            <li>table body : tbody</li>
+            <li>table footer : tfoot</li>
+            <li>table row : tr</li>
+            <li>table data or table cell : td</li>
+            <li>table header cell : th</li>
+            <li>table caption: caption</li>
+            <li>column eksathe kore fela : colspan</li>
+        </ul>
+
+        <button title="Please click me">Click Me</button>
+        <button disabled>Click Me Again</button>
+        <input type="number" max="10" min="5" name="" id="" placeholder="max 10, min 5 ">
+    </main>
+
+    <footer>
+
+    </footer>
+
+</body>
+
+</html>
