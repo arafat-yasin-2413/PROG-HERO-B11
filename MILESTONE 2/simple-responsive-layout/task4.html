@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 4</title>
+
+    <style>
+        .container{
+            height: 800px;
+            border: 4px solid gray;
+
+            display: grid;
+            grid-template-rows: 30% 30%;
+
+            padding: 20px;
+
+            gap: 20px;
+        }
+
+
+        .container img{
+            width: 100%;
+        }
+
+        .item{
+
+            border: 2px solid red;
+            display: grid;
+            grid-template-columns: 30% auto;
+
+            justify-content: center;
+            align-items: center;
+
+            gap:20px;
+
+            height: 300px;
+        }
+
+
+        @media screen and (max-width: 576px) {
+            .item{
+                display: grid;
+                grid-template-rows: repeat(1,1fr);
+            }
+        }
+    </style>
+
+</head>
+<body>
+    <div class="container">
+        <div class="item">
+            <div class="image-part">
+                <img src="./images/food.webp" alt="">
+
+            </div>
+
+            <div class="content-part">
+
+                <h3>Food 1</h3>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt libero similique tenetur consequuntur hic vel, aspernatur odit odio vero dicta placeat, ducimus ipsum, fuga assumenda veniam illo natus eaque accusamus!
+                </p>
+                <button>Read More</button>
+            </div>
+        </div>
+
+        <div class="item">
+
+            <div class="image-part">
+
+                <img src="./images/tiger.jpg" alt="">
+            </div>
+
+            <div class="content-part">
+
+                <h3>Food 2</h3>
+                <p>
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Earum assumenda perferendis aperiam illo debitis repudiandae! Accusamus, minima. Tenetur, quasi tempora nihil sint voluptas incidunt asperiores! Minus incidunt nemo repellendus. Voluptatem!
+                </p>
+                <button>Read More</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
