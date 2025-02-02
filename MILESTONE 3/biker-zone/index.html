@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Biker Zone</title>
 
+    <link rel="stylesheet" href="./style.css">
+
 
 
 
@@ -28,12 +30,12 @@
     <!-- Tailwind CSS cdn -->
     <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
 
-    <style type="text/tailwindcss">
+    <!-- <style type="text/tailwindcss">
         @theme {
           --color-clifford: #da373d;
           /* --color-bike-primary: #E76F51; */
         }
-    </style>
+    </style> -->
 
     <script>
         tailwind.config = {
@@ -212,15 +214,47 @@
 
         </div>
 
-
-
-
     </header>
 
 
     <main class="md:container mx-auto">
         <!-- featured bike section hw -->
         <section>
+            <h3 class="text-5xl font-bold text-center mt-12">Featured Bikes In This Year</h3>
+            <h5 class="text-sm font-bold text-bike-primary text-center">Best Bike Collection</h5>
+
+            <!-- 3 bikes -->
+            <div class="grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-3 ">
+                <!-- bike 1 -->
+                <div class="flex  mt-10 mb-10 ">
+                    <div class="card bg-base text-neutral-content w-96">
+                        <div class="card-body items-center text-center">
+                            <img src="./images/others/feature-bike.png" alt="">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- bike 2 -->
+                <div class="flex  mt-10 mb-10 ">
+                    <div class="card bg-base text-neutral-content w-96">
+                        <div class="card-body items-center text-center">
+                            <img src="./images/others/feature-bike.png" alt="">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- bike 3 -->
+                <div class="flex  mt-10 mb-10 ">
+                    <div class="card bg-base text-neutral-content w-96">
+                        <div class="card-body items-center text-center">
+                            <img src="./images/others/feature-bike.png" alt="">
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+
 
         </section>
 
@@ -286,20 +320,109 @@
 
 
         <!-- Happy clients hw -->
-        <section>
+        <section>  
+
+            <!-- clients -->
+            <div class="grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-3 p-3">
+                <!-- client 1 -->
+                <div class="card bg-base-100 shadow-xl border border-red-400">
+    
+                    <figure class="px-10 pt-10">
+                        <img src="./images/others/user-1.png" alt="Shoes" class="w-1/2" />
+                    </figure>
+    
+                    <div class="card-body items-center text-center space-y-4">
+                        <p>
+                            Slate helps you see how
+                            many more days you need
+                            to work to reach your financial
+                            goal for the month and year.
+                        </p>
+    
+                        <p class="flex">
+                            <img src="./images/icons/star-fill.png" alt="">                        
+                            <img src="./images/icons/star-fill.png" alt="">                        
+                            <img src="./images/icons/star-fill.png" alt="">                        
+                            <img src="./images/icons/star-fill.png" alt="">                        
+                            <img src="./images/icons/star-empty.png" alt="">                        
+                        </p>
+                            
+                        <h5 class="card-title text-sm text-[#23A6F0]">Regina Miles</h5>
+                        <h5 class="card-title text-base">Banker</h5>
+                        
+                    </div>
+                </div>
+                <!-- client 2 -->
+                <div class="card bg-base-100 shadow-xl border border-red-400">
+    
+                    <figure class="px-10 pt-10">
+                        <img src="./images/others/user-2.png" alt="Shoes" class="w-1/2" />
+                    </figure>
+    
+                    <div class="card-body items-center text-center space-y-4">
+                        <p>
+                            Slate helps you see how
+                            many more days you need
+                            to work to reach your financial
+                            goal for the month and year.
+                        </p>
+    
+                        <p class="flex">
+                            <img src="./images/icons/star-fill.png" alt="">                        
+                            <img src="./images/icons/star-fill.png" alt="">                        
+                            <img src="./images/icons/star-fill.png" alt="">                        
+                            <img src="./images/icons/star-fill.png" alt="">                        
+                            <img src="./images/icons/star-empty.png" alt="">                        
+                        </p>
+                            
+                        <h5 class="card-title text-sm text-[#23A6F0]">Regina Miles</h5>
+                        <h5 class="card-title text-base">Banker</h5>
+                        
+                    </div>
+                </div>
+                <!-- client 3 -->
+                <div class="card bg-base-100 shadow-xl border border-red-400">
+    
+                    <figure class="px-10 pt-10">
+                        <img src="./images/others/user-3.png" alt="Shoes" class="w-1/2" />
+                    </figure>
+    
+                    <div class="card-body items-center text-center space-y-4">
+                        <p>
+                            Slate helps you see how
+                            many more days you need
+                            to work to reach your financial
+                            goal for the month and year.
+                        </p>
+    
+                        <p class="flex">
+                            <img src="./images/icons/star-fill.png" alt="">                        
+                            <img src="./images/icons/star-fill.png" alt="">                        
+                            <img src="./images/icons/star-fill.png" alt="">                        
+                            <img src="./images/icons/star-fill.png" alt="">                        
+                            <img src="./images/icons/star-empty.png" alt="">                        
+                        </p>
+                            
+                        <h5 class="card-title text-sm text-[#23A6F0]">Regina Miles</h5>
+                        <h5 class="card-title text-base">Banker</h5>
+                        
+                    </div>
+                </div>
+            </div>
+
 
         </section>
 
 
         <!-- FAQs section -->
-        <section class="my-24">
+        <section class="my-24 ">
             <h3 class="text-5xl font-bold text-center mb-12">Frequently Asked <span
                     class="text-bike-primary">Questoins</span></h3>
 
             <div class="hero">
-                <div class="hero-content flex-col lg:flex-row">
-                    <img src="./images/others/faq.png" class="max-w-md rounded-lg shadow-2xl" />
-                    <div class="space-y-5">
+                <div class="hero-content flex-col lg:flex-row ">
+                    <img src="./images/others/faq.png" class="max-w-md w-2/3 rounded-lg shadow-2xl" />
+                    <div class="space-y-5 w-2/3">
                         <div class="collapse collapse-arrow border border-blue-100">
                             <input type="radio" name="my-accordion-2" checked="checked" />
                             <div class="collapse-title text-xl font-medium">What are the most important things I should
@@ -323,10 +446,11 @@
                                     will help you be a more focused and legally compliant bike rider. </p>
                             </div>
                         </div>
-                        
+
                         <div class="collapse collapse-arrow border border-blue-100">
                             <input type="radio" name="my-accordion-2" />
-                            <div class="collapse-title text-xl font-medium">My bike has been in storage is it safe to ride?
+                            <div class="collapse-title text-xl font-medium">My bike has been in storage is it safe to
+                                ride?
                             </div>
                             <div class="collapse-content">
                                 <p>Safety First! Always obey the rules of the road. Obey all traffic signals, signs, and
@@ -337,7 +461,8 @@
 
                         <div class="collapse collapse-arrow border border-blue-100">
                             <input type="radio" name="my-accordion-2" />
-                            <div class="collapse-title text-xl font-medium">How can I tell if my helmet is old and I need a 
+                            <div class="collapse-title text-xl font-medium">How can I tell if my helmet is old and I
+                                need a
                                 new one?
                             </div>
                             <div class="collapse-content">
@@ -349,7 +474,8 @@
 
                         <div class="collapse collapse-arrow border border-blue-100">
                             <input type="radio" name="my-accordion-2" />
-                            <div class="collapse-title text-xl font-medium">What rules should I follow when riding my bike?
+                            <div class="collapse-title text-xl font-medium">What rules should I follow when riding my
+                                bike?
                             </div>
                             <div class="collapse-content">
                                 <p>Safety First! Always obey the rules of the road. Obey all traffic signals, signs, and
@@ -367,34 +493,53 @@
 
 
 
-    <footer class="footer bg-black text-neutral-content p-10">
-        <aside>
-          
-          <p>
-            ACME Industries Ltd.
-            <br />
-            Providing reliable tech since 1992
-          </p>
+
+
+
+    <footer class="footer bg-black text-neutral-content items-center p-10 md:px-40">
+        <!-- <aside class="bg-slate-400 md:flex-cols p-2 space-y-3"> -->
+        <aside class="md:flex-cols p-2 space-y-3">
+
+            <!-- <div class="bg-red-400 "> -->
+            <div class="space-x-4">
+                <a href="#">Download Now</a>
+                <a href="#">License</a>
+            </div>
+
+            <!-- <div class="bg-orange-400"> -->
+            <div class="space-x-4">
+                <a href="#">About</a>
+                <a href="#">Features</a>
+                <a href="#">Pricing</a>
+                <a href="#">Careers</a>
+                <a href="#">Help</a>
+                <a href="#">Privacy Policy</a>
+            </div>
+
+            <!-- <div class="bg-pink-300"> -->
+            <div class="">
+                <p>&copy 2025 Biker Zone. All rights reserved</p>
+            </div>
+
+
         </aside>
-        <nav>
-          <h6 class="footer-title">Get The App</h6>
-          <div class="grid grid-cols-1 gap-4">
 
-            <a>
-              <img class="w-36" src="./images/others/android.png" alt="">
-            </a>
+        <nav class="grid-flow-col gap-4 md:place-self-center md:justify-self-end">
+            <div class="flex-col">
+                <h6 class="footer-title text-slate-50">Social</h6>
+                <div class="grid grid-cols-1 gap-4">
+                    <a>
+                        <img class="w-36" src="./images/others/android.png" alt="">
+                    </a>
+                    <a>
+                        <img class="w-36" src="./images/others/ios.png" alt="">
+                    </a>
 
-            <a>
-              <img class="w-36" src="./images/others/ios.png" alt="">
-            </a>
+                </div>
 
-            
-
-          </div>
+            </div>
         </nav>
-      </footer>
-
-
+    </footer>
 
 
 
