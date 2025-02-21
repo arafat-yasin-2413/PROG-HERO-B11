@@ -1,0 +1,26 @@
+h1{
+	color: lightcoral;
+}
+
+#fruits-title{
+	color: black;
+}
+
+.fav-places{
+	color: blueviolet;
+}
+
+.yellow-bg{
+	/* background-color: yellowgreen !important;
+	 */
+
+	
+}
+
+.text-center{
+	text-align: center;
+}
+
+.large-text{
+	font-size: 2em;
+}
