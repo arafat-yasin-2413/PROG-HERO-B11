@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DevBoard</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.24/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+
+</head>
+
+<body class="bg-gray-300 min-h-screen m-0 p-0">
+
+    <header class="w-10/12 mx-auto ">
+        <nav class="py-4">
+            <div class="navbar bg-base-100 rounded-md">
+                <div class="navbar-start gap-2">
+
+                    <img src="./assets/logo.png" alt="brand-logo">
+                    <h1 class="text-3xl">Dev<span class="text-teal-950 font-bold">Board</span></h1>
+                </div>
+
+                <div class="navbar-end gap-6 flex">
+                    <div>
+                        <button class="btn rounded-full flex justify-center items-center">
+                            <img class="w-6 h-6" src="./assets/checkbox.png" alt="checkbox">
+                            <span class="font-bold text-2xl">23</span>
+                        </button>
+                    </div>
+
+
+                    <div class="">
+                        <button class="btn btn-circle">
+                            <img class="w-4/5" src="./assets/theme-btn.png" alt="themeButton">
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+        </nav>
+
+        <!-- <div class="border-b border-dashed border-gray-400"></div> -->
+
+
+    </header>
+
+    <main class="w-10/12 mx-auto">
+
+
+        <section class="flex gap-4">
+
+            <div class="flex w-3/4 gap-2">
+                <div class="bg-pink-300 w-1/4 flex ">
+
+                    <div class="bg-base-100 rounded-full w-12 h-12 flex justify-center items-center">
+                        <img class="w-1/2" src="./assets/checkbox.png" alt="checkbox">
+
+                    </div>
+                    <div>
+                        <h4 class="text-l">Task Assigned</h4>
+                        <h4>05</h4>
+                    </div>
+                </div>
+
+                <div class="bg-green-300 flex-1">
+                    02
+                </div>
+
+                <div class="bg-sky-300 w-1/4">
+                    03
+                </div>
+
+            </div>
+
+            <div class="w-1/4 h-3/6 bg-slate-600">
+                <h4>activity log</h4>
+            </div>
+
+        </section>
+
+
+
+
+
+
+
+
+
+
+        <div class="max-w-7xl mx-auto bg-white p-6 rounded-xl shadow-md">
+
+            <!-- Header Section -->
+            <div class="grid grid-cols-3 gap-4 mb-6">
+                <div class="bg-gray-100 p-4 rounded-lg flex items-center justify-center">
+                    <div class="text-center">
+                        <p class="text-gray-600">Task Assigned</p>
+                        <p class="text-2xl font-bold">05</p>
+                    </div>
+                </div>
+                <div
+                    class="bg-gradient-to-r from-blue-500 to-indigo-500 p-4 rounded-lg text-white flex items-center justify-center">
+                    <p class="font-semibold">📅 Discover Something New Today!</p>
+                </div>
+                <div class="bg-gray-100 p-4 rounded-lg flex items-center justify-center">
+                    <div class="text-center">
+                        <p class="text-gray-600">Wed,</p>
+                        <p class="text-xl font-bold">Jul 28 2025</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Main Content Grid (Tasks + Activity Log) -->
+            <div class="grid grid-cols-4 gap-6">
+
+                <!-- Task Cards Section (3/4 Columns) -->
+                <div class=" grid grid-cols-3 col-span-3 gap-6">
+                    
+                    
+                    <div class="bg-white p-4 shadow rounded-lg border">
+                        <p class="bg-gray-200 text-xs px-2 py-1 rounded inline-block">ShopEase</p>
+                        <h3 class="text-lg font-semibold mt-2">Fix Mobile Button Issue</h3>
+                        <p class="text-sm text-gray-500 mt-1">Debug using Chrome DevTools, check for overlapping...</p>
+                        <p class="text-xs text-gray-500 mt-3">Deadline: <strong>21 March 2025</strong></p>
+                        <button class="mt-3 bg-blue-600 text-white text-sm px-3 py-1 rounded-lg">Completed</button>
+                    </div>
+
+                    <div class="bg-white p-4 shadow rounded-lg border">
+                        <p class="bg-gray-200 text-xs px-2 py-1 rounded inline-block">CloudSync</p>
+                        <h3 class="text-lg font-semibold mt-2">Add Dark Mode</h3>
+                        <p class="text-sm text-gray-500 mt-1">Store the user’s preference in localStorage, update CSS
+                            variables...</p>
+                        <p class="text-xs text-gray-500 mt-3">Deadline: <strong>21 March 2025</strong></p>
+                        <button class="mt-3 bg-blue-600 text-white text-sm px-3 py-1 rounded-lg">Completed</button>
+                    </div>
+
+                    <div class="bg-white p-4 shadow rounded-lg border">
+                        <p class="bg-gray-200 text-xs px-2 py-1 rounded inline-block">SwiftPay</p>
+                        <h3 class="text-lg font-semibold mt-2">Optimize Home Page</h3>
+                        <p class="text-sm text-gray-500 mt-1">Debug using Chrome DevTools, check for overlapping...</p>
+                        <p class="text-xs text-gray-500 mt-3">Deadline: <strong>21 March 2025</strong></p>
+                        <button class="mt-3 bg-blue-600 text-white text-sm px-3 py-1 rounded-lg">Completed</button>
+                    </div>
+
+                    <div class="bg-white p-4 shadow rounded-lg border">
+                        <p class="bg-gray-200 text-xs px-2 py-1 rounded inline-block">Meta</p>
+                        <h3 class="text-lg font-semibold mt-2">Add New Emoji 🙌</h3>
+                        <p class="text-sm text-gray-500 mt-1">Debug using Chrome DevTools, check for overlapping...</p>
+                        <p class="text-xs text-gray-500 mt-3">Deadline: <strong>21 March 2025</strong></p>
+                        <button class="mt-3 bg-blue-600 text-white text-sm px-3 py-1 rounded-lg">Completed</button>
+                    </div>
+
+                    <div class="bg-white p-4 shadow rounded-lg border">
+                        <p class="bg-gray-200 text-xs px-2 py-1 rounded inline-block">Google LLC</p>
+                        <h3 class="text-lg font-semibold mt-2">Integrate OpenAI API</h3>
+                        <p class="text-sm text-gray-500 mt-1">Debug using Chrome DevTools, check for overlapping...</p>
+                        <p class="text-xs text-gray-500 mt-3">Deadline: <strong>21 March 2025</strong></p>
+                        <button class="mt-3 bg-blue-600 text-white text-sm px-3 py-1 rounded-lg">Completed</button>
+                    </div>
+
+                    <div class="bg-white p-4 shadow rounded-lg border">
+                        <p class="bg-gray-200 text-xs px-2 py-1 rounded inline-block">Glassdoor</p>
+                        <h3 class="text-lg font-semibold mt-2">Improve Job Searching</h3>
+                        <p class="text-sm text-gray-500 mt-1">Debug using Chrome DevTools, check for overlapping...</p>
+                        <p class="text-xs text-gray-500 mt-3">Deadline: <strong>21 March 2025</strong></p>
+                        <button class="mt-3 bg-blue-600 text-white text-sm px-3 py-1 rounded-lg">Completed</button>
+                    </div>
+                </div>
+
+                <!-- Activity Log Section (1/4 Columns) -->
+                <div class="bg-gray-100 p-6 rounded-lg">
+                    <h3 class="font-semibold text-lg mb-3">Activity Log</h3>
+                    <button class="bg-blue-500 text-white px-4 py-2 rounded-lg text-sm mb-3 w-full">Clear
+                        History</button>
+
+                    <div class="bg-white p-3 rounded-lg shadow mb-2 text-sm">
+                        <p>✅ You have completed the task <strong>"Add Dark Mode"</strong> at 12:48:15 PM</p>
+                    </div>
+
+                    <div class="bg-white p-3 rounded-lg shadow mb-2 text-sm">
+                        <p>✅ You have completed the task <strong>"Optimize Home Page"</strong> at 12:50:30 PM</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+
+
+
+
+    </main>
+
+
+
+
+
+
+
+</body>
+
+</html>
