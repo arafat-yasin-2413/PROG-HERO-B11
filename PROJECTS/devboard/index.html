@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DevBoard</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.24/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+
+    <!-- Font poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
+
+    <style>
+        .poppins-font {
+            font-family: "Poppins", sans-serif;
+
+        }
+    </style>
+
+</head>
+
+<body id="whole-body" class="bg-gray-200 min-h-screen m-0 p-0 poppins-font">
+    <!-- navbar section inside header -->
+    <header class="w-10/12 mx-auto ">
+        <nav class="py-4">
+            <div class="navbar bg-base-100 rounded-md">
+                <div class="navbar-start gap-2">
+
+                    <img src="./assets/logo.png" alt="brand-logo">
+                    <h1 class="text-3xl">Dev<span class="text-teal-950 font-bold">Board</span></h1>
+                </div>
+
+                <div class="navbar-end gap-6 flex">
+                    <div>
+                        <button class="btn rounded-full flex justify-center items-center">
+                            <img class="w-6 h-6" src="./assets/checkbox.png" alt="checkbox">
+                            <span id="total-task" class="font-bold text-2xl">23</span>
+                        </button>
+                    </div>
+
+
+                    <div class="">
+                        <button id="theme-btn" class="btn btn-circle">
+                            <img class="w-4/5" src="./assets/theme-btn.png" alt="themeButton">
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+        </nav>
+
+    </header>
+
+    <!-- main contents part -->
+    <main class="w-10/12 mx-auto">
+
+        <!-- whole content section -->
+        <section class="pb-16">
+            <!-- content container -->
+            <div class="grid grid-cols-1 lg:grid-cols-4 gap-6">
+
+                <!-- content left part -->
+                <div class="col-span-3 bg-white px-4 pt-4 pb-8 rounded-xl">
+
+
+                    <!-- Task assigned, discover, date part -->
+                    <div class="flex gap-6">
+                        <!-- Task Assigned -->
+                        <div class="bg-[#F4F7FF] rounded-xl w-72 flex gap-4 px-5 py-6">
+
+                            <!-- checkbox image -->
+                            <div
+                                class="bg-base-100 p-2 flex flex-col justify-center items-center rounded-full w-10 h-10">
+                                <img class="w-8 h-8" src="./assets/checkbox.png" alt="">
+                            </div>
+
+                            <!-- texts -->
+                            <div>
+                                <h4 class="text-sm text-[#00303C] font-medium">Task Assigned</h4>
+                                <h4 id="task-assigned" class="text-2xl font-bold text-[#00303C]">06</h4>
+                            </div>
+
+                        </div>
+
+                        <!-- Discover something -->
+                        <div id="discover-div"
+                            class="bg-gradient-to-r from-[#3752FD] via-[#6C7FFA] to-[#9BA8F8] flex-1 rounded-xl text-white">
+                            <div class="flex  gap-6 items-center px-5 py-2">
+                                <img class=" ml-6" src="./assets/board.png" alt="calendar image">
+
+                                <h3 class="text-2xl">
+                                    Discover Something <br>
+                                    New Today!
+                                </h3>
+                            </div>
+                        </div>
+
+                        <!-- Date -->
+                        <div class="bg-[#F4F7FF] w-72 rounded-xl flex">
+                            <div class="flex items-center gap-4 px-4 py-2">
+
+                                <div class="bg-base-100 w-10 h-10 rounded-full flex justify-center items-center">
+                                    <img class="p-2" src="./assets/calender.png" alt="">
+                                </div>
+
+                                <p id="" class="text-[#00303C]">
+                                    <span id="week-day" class=" text-2xl"></span>
+                                    <span class="font-semibold text-2xl">, <br></span>
+                                    <span id="full-date" class="text-2xl font-semibold"></span>
+                                </p>
+
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- dashed line -->
+                    <div class="border-b border-dashed border-gray-300 mt-6">
+
+                    </div>
+
+                    <!-- All Task Cards -->
+                    <div class="grid grid-cols-3 gap-6 mt-6">
+                        <!-- card 1 -->
+                        <div id="card-1" class="bg-[#F4F7FF] rounded-xl p-6">
+                            <p
+                                class="bg-base-100 max-w-fit px-2 py-2 text-[#00303C] text-sm rounded-md font-medium mb-2">
+                                ShopEase</p>
+                            <h2 id="card-title-1" class="text-[#00303C] text-2xl font-medium mb-3">Fix Mobile Button
+                                Issue</h2>
+
+                            <p class="bg-base-100 text-sm w-5/6 p-2 rounded-md py-3 font-light mb-4">
+                                Debug using chrome <br>
+                                DevTools, check for overlappi...
+                            </p>
+
+                            <!-- dashed line -->
+                            <div class="border-b border-dashed border-gray-300 mb-2">
+
+                            </div>
+
+                            <div class="w-11/12 gap-12 flex items-center">
+                                <p class="text-[#00303C]">
+                                    <span class="text-sm font-light">Deadline</span>
+                                    <br>
+                                    <span class="font-medium text-base">21 March 2025</span>
+                                </p>
+
+                                <button
+                                    class="completed-btn btn-sm rounded-md font-light text-sm bg-[#3752FD] border-0 text-white">
+                                    Completed
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- card 2 -->
+                        <div id="card-2" class="bg-[#F4F7FF] rounded-xl p-6">
+                            <p
+                                class="bg-base-100 max-w-fit px-2 py-2 text-[#00303C] text-sm rounded-md font-medium mb-2">
+                                CloudSync</p>
+                            <h2 id="card-title-2" class="text-[#00303C] text-2xl font-medium mb-3">Add Dark Mode</h2>
+
+                            <p class="bg-base-100 text-sm w-5/6 p-2 rounded-md py-3 font-light mb-4">
+                                Store the user's preferences in <br>
+                                localStorage, update CSS vari...
+                            </p>
+
+                            <!-- dashed line -->
+                            <div class="border-b border-dashed border-gray-300 mb-2">
+
+                            </div>
+
+                            <div class="w-11/12 gap-12 flex items-center">
+                                <p class="text-[#00303C]">
+                                    <span class="text-sm font-light">Deadline</span>
+                                    <br>
+                                    <span class="font-medium text-base">25 March 2025</span>
+                                </p>
+
+                                <button
+                                    class="completed-btn btn-sm rounded-md font-light text-sm bg-[#3752FD] border-0 text-white">
+                                    Completed
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- card 3 -->
+                        <div id="card-3" class="bg-[#F4F7FF] rounded-xl p-6">
+                            <p
+                                class="bg-base-100 max-w-fit px-2 py-2 text-[#00303C] text-sm rounded-md font-medium mb-2">
+                                SwiftPay</p>
+                            <h2 id="card-title-3" class="text-[#00303C] text-2xl font-medium mb-3">Optimize Home Page
+                            </h2>
+
+                            <p class="bg-base-100 text-sm w-5/6 p-2 rounded-md py-3 font-light mb-4">
+                                Debug using chrome <br>
+                                DevTools, check for overlappi...
+                            </p>
+
+                            <!-- dashed line -->
+                            <div class="border-b border-dashed border-gray-300 mb-2">
+
+                            </div>
+
+                            <div class="w-11/12 gap-12 flex items-center">
+                                <p class="text-[#00303C]">
+                                    <span class="text-sm font-light">Deadline</span>
+                                    <br>
+                                    <span class="font-medium text-base">30 March 2025</span>
+                                </p>
+
+                                <button
+                                    class="completed-btn btn-sm rounded-md font-light text-sm bg-[#3752FD] border-0 text-white">
+                                    Completed
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- card 4 -->
+                        <div id="card-4" class="bg-[#F4F7FF] rounded-xl p-6">
+                            <p
+                                class="bg-base-100 max-w-fit px-2 py-2 text-[#00303C] text-sm rounded-md font-medium mb-2">
+                                Meta</p>
+                            <h2 id="card-title-4" class="text-[#00303C] text-2xl font-medium mb-3">Add new emoji 🤲</h2>
+
+                            <p class="bg-base-100 text-sm w-5/6 p-2 rounded-md py-3 font-light mb-4">
+                                Debug using chrome <br>
+                                DevTools, check for overlappi...
+                            </p>
+
+                            <!-- dashed line -->
+                            <div class="border-b border-dashed border-gray-300 mb-2">
+
+                            </div>
+
+                            <div class="w-11/12 gap-16 flex items-center">
+                                <p class="text-[#00303C]">
+                                    <span class="text-sm font-light">Deadline</span>
+                                    <br>
+                                    <span class="font-medium text-base">12 April 2025</span>
+                                </p>
+
+                                <button
+                                    class="completed-btn btn-sm rounded-md font-light text-sm bg-[#3752FD] border-0 text-white">
+                                    Completed
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- card 5 -->
+                        <div id="card-5" class="bg-[#F4F7FF] rounded-xl p-6">
+                            <p
+                                class="bg-base-100 max-w-fit px-2 py-2 text-[#00303C] text-sm rounded-md font-medium mb-2">
+                                GoogleLLC</p>
+                            <h2 id="card-title-5" class="text-[#00303C] text-2xl font-medium mb-3">Integrate OpenAI API
+                            </h2>
+
+                            <p class="bg-base-100 text-sm w-5/6 p-2 rounded-md py-3 font-light mb-4">
+                                Debug using chrome <br>
+                                DevTools, check for overlappi...
+                            </p>
+
+                            <!-- dashed line -->
+                            <div class="border-b border-dashed border-gray-300 mb-2">
+
+                            </div>
+
+                            <div class="w-11/12 gap-16 flex items-center">
+                                <p class="text-[#00303C]">
+                                    <span class="text-sm font-light">Deadline</span>
+                                    <br>
+                                    <span class="font-medium text-base">17 March 2025</span>
+                                </p>
+
+                                <button
+                                    class="completed-btn btn-sm rounded-md font-light text-sm bg-[#3752FD] border-0 text-white">
+                                    Completed
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- card 6 -->
+                        <div id="card-6" class="bg-[#F4F7FF] rounded-xl p-6">
+                            <p
+                                class="bg-base-100 max-w-fit px-2 py-2 text-[#00303C] text-sm rounded-md font-medium mb-2">
+                                Glassdoar</p>
+                            <h2 id="card-title-6" class="text-[#00303C] text-2xl font-medium mb-3">Improve Job searching
+                            </h2>
+
+                            <p class="bg-base-100 text-sm w-5/6 p-2 rounded-md py-3 font-light mb-4">
+                                Debug using chrome <br>
+                                DevTools, check for overlappi...
+                            </p>
+
+                            <!-- dashed line -->
+                            <div class="border-b border-dashed border-gray-300 mb-2">
+
+                            </div>
+
+                            <div class="w-11/12 gap-16 flex items-center">
+                                <p class="text-[#00303C]">
+                                    <span class="text-sm font-light">Deadline</span>
+                                    <br>
+                                    <span class="font-medium text-base">22 April 2025</span>
+                                </p>
+
+                                <button
+                                    class="completed-btn btn-sm rounded-md font-light text-sm bg-[#3752FD] border-0 text-white">
+                                    Completed
+                                </button>
+                            </div>
+                        </div>
+
+
+                    </div>
+
+
+
+                </div>
+
+                <!-- content right part activity log -->
+                <div class="bg-base-100 rounded-lg">
+
+                    <div class="flex gap-2 mt-6 mb-4 justify-center items-center ">
+                        <img src="./assets/activity.png" alt="activity image">
+                        <h4 class="font-medium">Activity Log</h4>
+                    </div>
+
+
+                    <div class="flex  justify-center items-center ">
+                        <button id="clear-history-btn" class="btn-sm bg-[#3752FD] text-white rounded-md ">Clear
+                            History</button>
+
+
+                    </div>
+
+                    <!-- dashed line -->
+                    <div class="border-b border-dashed border-gray-300 mt-6">
+
+                    </div>
+
+
+                    <!-- Activities div -->
+                    <div id="activity-div" class="mt-2 p-6">
+
+                    </div>
+
+                </div>
+
+                <div></div>
+
+            </div>
+
+
+
+        </section>
+
+
+
+
+
+    </main>
+
+
+
+
+
+
+    <script>
+        const currentDateObject = new Date();
+
+        const weekDay = currentDateObject.toLocaleDateString('en-US', { weekday: 'short' });
+
+        const fullDate = currentDateObject.toLocaleDateString('en-US', {
+            year: 'numeric',
+            month: 'long',
+            day: 'numeric'
+        });
+
+        document.getElementById('week-day').innerText = weekDay;
+        document.getElementById('full-date').innerText = fullDate;
+
+
+
+    </script>
+
+
+    <script src="./script/complete.js"></script>
+    <script src="./script/clearHistory.js"></script>
+    <script src="./script/discover.js"></script>
+    <script src="script/theme.js"></script>
+
+</body>
+
+</html>

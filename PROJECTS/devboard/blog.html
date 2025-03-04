@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.24/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+
+    <!-- Font poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
+
+    <style>
+        .poppins-font {
+            font-family: "Poppins", sans-serif;
+
+        }
+    </style>
+
+</head>
+
+<body class="bg-gray-200 min-h-screen m-0 p-0 poppins-font">
+    <!-- navbar section inside header -->
+    <header class="w-10/12 mx-auto ">
+        <nav class="py-4">
+            <div class="navbar bg-base-100 rounded-md">
+                <div class="navbar-start gap-2">
+
+                    <img src="./assets/logo.png" alt="brand-logo">
+                    <h1 class="text-3xl">Dev<span class="text-teal-950 font-bold">Board</span></h1>
+                </div>
+
+                <div class="navbar-end gap-6 flex">
+                    <a class="bg-[#3752FD] text-white p-4 rounded-xl font-semibold" href="./index.html">
+                        Back to Desk
+                    </a>
+
+
+
+                </div>
+            </div>
+
+        </nav>
+
+        <!-- <div class="border-b border-dashed border-gray-400"></div> -->
+
+
+    </header>
+
+    <!-- main contents part -->
+    <main class="w-10/12  mx-auto">
+        <!-- Blog Section Starts -->
+        <section class="pb-16">
+            <h2 class="text-center font-bold text-3xl text-[#00303C mb-4">Blogs</h2>
+
+            <div class="">
+                <div class="bg-base-100 p-4 rounded-xl mb-6">
+                    <h3 class="text-xl font-semibold mb-2">
+                        Question-1: What are the different ways to select an element in the DOM?
+                    </h3>
+
+                    <!-- dashed line -->
+                    <div class="border-b border-dashed border-gray-300 mt-4 mb-4">
+                        
+                    </div>
+
+                    <p>
+                        We can select html elements using DOM in 5 different ways. They are : <br>
+                        a) getElementById() <br>
+                        b) getElementsByTagName() <br>
+                        c) getElementsByClassName() <br>
+                        d) querySelector() <br>
+                        e) querySelectorAll() <br>
+                    </p>
+                </div>
+                <div class="bg-base-100 p-4 rounded-xl mb-6">
+                    <h3 class="text-xl font-semibold mb-2">
+                        Question-2: What is the difference between innerHTML, innerText, and textContent ?
+                    </h3>
+
+                    <!-- dashed line -->
+                    <div class="border-b border-dashed border-gray-300 mt-4 mb-4">
+                        
+                    </div>
+
+                    <p>
+                    <p class="mb-2">
+
+                        <b>innerHTMl</b> HTML ট্যাগ সহ পুরো এলিমেন্ট টাকে রিটার্ন করে। <br>
+                        <b>innerText</b> শুধু HTML ট্যাগের ভিতরের লেখা বা text টুকু রিটার্ন করে। সাধারণত একটা এলিমেন্টের ভিতরের
+                        text পাওয়ার জন্য আমরা এটা ব্যবহার করি। <br>
+                        <b>textContent</b> একটু আলাদা। এটা তার সিলেক্টরের ভিতরের যত লেখা বা text আছে সেই সব text রিটার্ন করে বা
+                        দেখায়।
+
+                    </p>
+                    
+
+                </div>
+
+                <div class="bg-base-100 p-4 rounded-xl mb-6">
+                    <h3 class="text-xl font-semibold mb-2">
+                        Question-3: What is event delegation in the DOM?
+                    </h3>
+
+                    <!-- dashed line -->
+                    <div class="border-b border-dashed border-gray-300 mt-4 mb-4">
+                        
+                    </div>
+
+                    <p>
+                        Event delegation হচ্ছে এমন একটি পদ্ধতি যার মাধ্যমে কোনো HTML
+                        এলিমেন্টের প্যারেন্টের উপর addEventListener বসিয়ে তার child গুলোকে
+                        অ্যাক্সেস কর যায়। এক্ষেত্রে প্রতিটা child এ event listener বসানোর প্রয়োজন হয় না।
+                        আমরা প্যারেন্টে event listener বসিয়ে callback ফাংশনে event কে পাস করি।
+                        তারপর event.target দিয়ে child গুলোকে ধরি। এটা event bubble এর মাধ্যমে কাজ করে।
+
+                    </p>
+                </div>
+
+                <div class="bg-base-100 p-4 rounded-xl mb-6">
+                    <h3 class="text-xl font-semibold mb-2">
+                        Question-4: What is event bubbling in the DOM?
+                    </h3>
+
+                    <!-- dashed line -->
+                    <div class="border-b border-dashed border-gray-300 mt-4 mb-4">
+                        
+                    </div>
+
+                    <p>
+                        Event Bubbling হলো DOM এর এমন বৈশিষ্ট্য যেখানে কোনো child এলিমেন্টের উপর
+                        event ট্রিগার হয়ে সেই event টি তার প্যারেন্ট এলিমেন্টের দিকে ধাপে ধাপে যেতে থাকে।
+                        event টি উপরের দিকে document না পাওয়া পর্যন্ত যেতে থাকে।
+                        এটা অনেকটা পানির নিচ থেকে উপরের দিকে bubble উঠে যাওয়ার মতো করে কাজ করে।
+                        এভাবে কোনো একটা event নিচ থেকে উপরের দিকে bubble করতে করতে যায়।
+
+
+                    </p>
+                </div>
+                <div class="bg-base-100 p-4 rounded-xl mb-6">
+                    <h3 class="text-xl font-semibold mb-2">
+                        Question-5: How do you create, add, and remove elements using JavaScript?
+                    </h3>
+
+                    <!-- dashed line -->
+                    <div class="border-b border-dashed border-gray-300 mt-4 mb-4">
+                        
+                    </div>
+
+                    <p>
+                        <b>create:</b> <br>
+                    <p>
+                        const newP = document.createElement('p'); <br>
+                        newP.innerText = "A quick brown fox had a nice tail.";
+                    </p>
+
+                    <br>
+
+                    <p>
+                        <b>add:</b> <br>
+                    </p>
+                    <p>
+                        const parentDiv = document.getElementById('parent-div'); <br>
+                        const h3 = document.createElement('h3'); <br>
+                        h3.innerText = "DOM is the life to my website"; <br>
+                        parentDiv.appendChild(h3); <br>
+                    </p>
+                    </p>
+
+                    <br>
+                    <p>
+                        <b>remove:</b>
+                    </p>
+
+                    <p>
+                        const items = document.getElementById('items'); <br>
+                        const child = document.getElementById('child-3'); <br>
+
+                        items.removeChild(child); <br>
+                    </p>
+                </div>
+            </div>
+        </section>
+
+
+
+        
+
+
+
+</body>
+
+</html>
