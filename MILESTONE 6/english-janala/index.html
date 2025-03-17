@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>English Janala</title>
+
+
+    <!-- fontawesome link -->
+    <script src="https://kit.fontawesome.com/759591cee3.js" crossorigin="anonymous"></script>
+
+    <!-- font poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
+
+
+    <!-- font inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
+
+
+    <!-- font hind siliguri -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- font tiro bangla -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tiro+Bangla:ital@0;1&display=swap" rel="stylesheet">
+
+
+    <!-- daisyui + tailwind -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+
+
+    <style>
+        .poppins {
+            font-family: "Poppins", sans-serif;
+        }
+
+
+        .hind-siliguri {
+            font-family: "Hind Siliguri", sans-serif;
+        }
+
+        .tiro-bangla {
+            font-family: "Tiro Bangla", serif;
+        }
+
+        .inter {
+            font-family: "Inter", sans-serif;
+        }
+
+
+
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+
+        section{
+            scroll-margin-top: 150px;
+        }
+
+
+
+
+        .active {
+            background-color: #422AD5;
+            color: white;
+        }
+    </style>
+
+</head>
+
+<body class="poppins">
+
+    <!-- <div class="bg-base-300 p-6 hover:bg-sky-100  m-2 border-sky-100 border-2 rounded-md">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Earum accusamus vitae praesentium eveniet sint et delectus nobis molestiae. Voluptate, mollitia.
+    </div> -->
+
+
+    <!-- header starts -->
+    <header>
+        <!-- navbar section starts -->
+        <nav id="navbar" class="fixed bg-white z-50 top-0 left-0 flex w-full justify-between px-10 py-6 border-b-2 border-gray-400 hidden">
+
+            <div class="flex justify-center items-center">
+                <span class="font-semibold text-xl">English</span>
+                <img src="./assets/logo.png" alt="">
+                <span class="tiro-bangla text-xl">জানালা</span>
+            </div>
+
+            <div>
+
+                <a class="btn text-[#422AD5] btn-outline hover:bg-[#422AD5] hover:text-white" href="#faq-section">
+
+                    <i class="fa-solid fa-question"></i>
+                    FAQ
+
+                </a>
+
+
+
+
+
+                <a class="btn text-[#422AD5] btn-outline hover:bg-[#422AD5] hover:text-white"
+                    href="#vocabulary-section">
+
+                    <i class="fa-solid fa-book-open"></i>
+                    Learn
+                </a>
+
+
+
+
+                <a onclick="logOutFunctionality()" class="btn text-[#422AD5] btn-outline hover:bg-[#422AD5] hover:text-white" href="">
+
+                    <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                    Logout
+                </a>
+
+
+
+            </div>
+
+        </nav>
+
+
+
+
+        <!-- Banner section starts -->
+        <section id="banner" class="mt-32 mb-20 flex justify-between items-center w-11/12 mx-auto">
+
+            <div class="flex flex-col pr-80">
+                <h1 class="text-5xl font-bold mb-6"> <span class="text-[#00BCFF]">English</span> is Easy!! </h1>
+                <p class="text-2xl font-medium hind-siliguri">
+                    আজ থেকেই আপনার ভাষা শেখার যাত্রা শুরু করুন। আপনি যদি নতুন হন অথবা আপনার দক্ষতা বাড়াতে চান, আমাদের
+                    Interactive Lessons আপনাকে নিয়ে যাবে অন্য একটি Level এ
+                </p>
+
+                <input id="name" type="text" placeholder="Enter Your Name" class="input focus:outline-none mt-10 mb-6" />
+                <input id="pass" type="password" placeholder="Enter Login Code (123456)" class="input focus:outline-none mb-6" />
+
+                <button onclick="loginValidation()" id="get-started-btn" class="hover:bg-blue-600 hover:text-white btn text-white bg-[#422AD5] w-1/5">Get Started</button>
+
+            </div>
+
+            <img src="./assets/hero-student.png" alt="">
+
+        </section>
+
+    </header>
+
+
+
+    <main>
+
+
+        <!-- vocabularies section starts -->
+        <section id="vocabulary-section" class="w-11/12 mx-auto mt-32 hidden">
+
+            <h2 class="text-4xl font-bold text-center mb-10"> <span class="text-[#00BCFF]">Let's</span> Learn
+                Vocabularies </h2>
+
+            <!-- lesson button container -->
+            <div id="button-container" class="mb-10 gap-4 flex justify-center">
+
+                <!-- dynamic buttons coming from API -->
+
+            </div>
+
+
+            <!-- Lesson select করুন -->
+            <div id="select-lesson" class="bg-[#F8F8F8] rounded-xl py-20 ">
+
+                <div class="text-center">
+                    <p class="text-sm hind-siliguri text-[#79716B] mb-6">
+                        আপনি এখনো কোন Lesson Select করেন নি
+                    </p>
+
+                    <p class="font-medium hind-siliguri text-4xl">
+                        একটি Lesson Select করুন।
+                    </p>
+                </div>
+
+            </div>
+
+
+            <!-- loader section -->
+            <section id="loader-section" class=" flex justify-center mt-10 mb-6">
+                <span class="loading loading-dots loading-xl"></span>
+            </section>
+
+
+
+
+
+            <!-- এই লেসনে ডাটা নেই -->
+            <!-- <div id="no-data-alert" class="bg-[#F8F8F8] flex justify-center items-center rounded-xl py-20 mt-10">
+
+                <div class="flex flex-col items-center">
+
+                    <img src="./assets/alert-error.png" alt="">
+                    <p class="text-sm text-center hind-siliguri text-[#79716B] mb-6">
+                        এই Lesson এ এখনো কোন Vocabulary যুক্ত করা হয়নি।
+                    </p>
+
+                    <p class="font-medium hind-siliguri text-4xl text-center">
+                        নেক্সট Lesson এ যান
+                    </p>
+                </div>
+
+            </div> -->
+
+
+
+            <!-- Cards of words -->
+            <div id="card-container" class="grid grid-cols-3 gap-4 bg-[#f8f8f8] mt-20 p-4">
+
+                <!-- dynamically card show hobe -->
+
+            </div>
+
+
+
+
+
+            <!-- modal -->
+            <dialog id="card_details" class="modal">
+                <div class="modal-box">
+                    <div id="details-container">
+
+                    </div>
+
+                    <!-- <div class="modal-action">
+                        <form method="dialog">
+                            
+                            <button class="btn">Close</button>
+                        </form>
+                    </div> -->
+                </div>
+            </dialog>
+        </section>
+
+
+        <!-- designing a modal's details -->
+        <!-- <div class="card bg-base-100 shadow-sm p-4">
+            <div class="border border-blue-200 p-4 rounded-md">
+                <h2 class="card-title font-semibold text-2xl mb-4">
+                    word with pronunci
+                    <span class="flex gap-1">
+
+                        (<i class="fa-solid fa-microphone-lines"></i> :ইগার )
+                        
+                    </span>
+                </h2>
+                
+                <div class="mb-6">
+                    <h5 class="font-semibold text-lg mb-3">
+                        Meaning
+                    </h5>
+    
+                    <h4 class=" text-lg font-medium hind-siliguri">
+                        আগ্রহী
+                    </h4>
+                </div>
+
+                <div class="mb-6">
+                    <h4 class="font-semibold text-lg mb-2">
+                        Example
+                    </h4>
+    
+                    <p class="font-normal">
+                        The kids were eager to open their gifts.
+                    </p>
+                </div>
+                
+
+                <div class="mb-2">
+                    <h4 class="font-medium hind-siliguri text-lg mb-3">
+                        সমার্থক শব্দ গুলো
+                    </h4>
+    
+                    <p id="synonyms-container" class="flex gap-4">
+
+                        <button class="btn text-sm font-normal btn-sm bg-[#EDF7FF] rounded-md">Enthusiastic</button>
+                        <button class="btn text-sm font-normal btn-sm bg-[#EDF7FF] rounded-md">Enthusiastic</button>
+                        <button class="btn text-sm font-normal btn-sm bg-[#EDF7FF] rounded-md">Enthusiastic</button>
+                    </p>
+                </div>
+            
+            </div>
+
+            <div class="mt-4">
+                <button class="btn bg-[#422AD5] text-white rounded-md">Complete Learning</button>
+            </div>
+        </div> -->
+
+
+
+
+
+
+
+        <!-- FAQ section starts -->
+        <section id="faq-section" class=" mb-44 w-11/12 mx-auto hidden" style="margin-top: 500px;">
+
+            <h1 class="text-center text-4xl font-bold mb-20"> <span class="text-[#00BCFF]">Frequently</span> Asked
+                Questions</h1>
+
+            <!-- q 1 -->
+            <div class="collapse collapse-plus bg-base-100 border border-base-300">
+                <input type="radio" name="my-accordion-3"  />
+                <div class="collapse-title font-semibold">1. The difference between var, let, and const.</div>
+                <div class="collapse-content text-sm">
+                    <p>
+                        <strong>var</strong> কে ফাংশন স্কোপের মধ্যে যেকোনো জায়গা থেকে অ্যাক্সেস করা যায়। একই নামে আবার ভ্যারিয়েবল ডিক্লেয়ার করা যায় এবং রি-অ্যাসাইন করা যায়।
+                    </p>
+
+                    <p>
+                        <strong>let</strong> হলো ব্লক স্কোপ। যেই ব্লকে ডিক্লেয়ার করা হবে, সেই ব্লকের বাইরে থেকে অ্যাক্সেস করা যাবে না। পুনরায় ডিক্লেয়ার করা জায় না। কিন্তু রি-অ্যাসাইন করা যায়।
+                    </p>
+
+                    <p>
+                        <strong>const</strong> ও ব্লক স্কোপের মধ্যে কাজ করে। এটাকে মান ছাড়া ডিক্লেয়ার করা যায় না। পুনরায় ডিক্লেয়ার , রি-অ্যাসাইন করা যায় না। ডিক্লেয়ার করার সময় যে মান দেয়া হবে সেইটাই থাকবে।
+                    </p>
+                </div>
+            </div>
+
+            <!-- q 2 -->
+            <div class="collapse collapse-plus bg-base-100 border border-base-300">
+                <input type="radio" name="my-accordion-3" />
+                <div class="collapse-title font-semibold">2. The difference between map(), forEach(), and filter().
+                </div>
+                <div class="collapse-content text-sm">
+                    <p>
+                        <strong>map()</strong> সাধারণত কোনো অ্যারের উপর কাজ করার পর নতুন অ্যারে রিটার্ন করে।
+                    </p>
+
+
+                    <p>
+                        <strong>forEach()</strong> শুধুমাত্র অ্যারের এলিমেন্ট গুলো নিয়ে নির্দিষ্ট কাজ করে। নতুন কোনো অ্যারেতে ভ্যালু রিটার্ন করে না। 
+                    </p>
+
+                    <p>
+                        <strong>filter()</strong> অ্যারের উপর কন্ডিশন অনুযায়ী কাজ করার পর নতুন অ্যারে রিটার্ন করে।
+                    </p>
+
+                </div>
+            </div>
+
+            <!-- q 3 -->
+            <div class="collapse collapse-plus bg-base-100 border border-base-300">
+                <input type="radio" name="my-accordion-3" />
+                <div class="collapse-title font-semibold">3. Explain arrow functions and how they are different from
+                    regular functions.</div>
+                <div class="collapse-content text-sm">
+                    <p>
+                        সাধারণ ভ্যারিয়েবলের নামের মতো করে লিখে এক লাইনে কাজ করে কিছু রিটার্ন করা যায়। প্যারামিটার ও নেয়া যায়। আর এখানে => চিহ্ন টি ব্যবহার করা হয়। <strong>Arrow</strong> ফাংশনের কাজ এক লাইনে করলে রিটার্ন কীওয়ার্ড লিখতে হয় না। মাল্টি-লাইন হলে {} দিয়ে তার মধ্যে যাবতীয় কোড লিখা যায়। সাধারণ ফাংশনের চেয়ে কম কোড লিখে কাজ করা যায়। এক রকম শর্টকাট বলা যেতে পারে। 
+                    </p>
+                </div>
+            </div>
+
+
+            <!-- q 4 -->
+            <div class="collapse collapse-plus bg-base-100 border border-base-300">
+                <input type="radio" name="my-accordion-3" />
+                <div class="collapse-title font-semibold">4. How JavaScript Promises work?</div>
+                <div class="collapse-content text-sm">
+                    <p>
+                        জাভাস্ক্রিপ্টে ফেচ করে কোনো ডেটা আনার সময় সেটা কিছুটা সময় নেয়। যেটাকে আমরা Asynchronous Behavior বলে থাকি। এই মধ্যবর্তী সময়ে fetch থেকে আমরা একটা Promise পাই। এই Promise টা Resolve অথবা Rejected হতে পারে। Promise হচ্ছে এই Resolve / Rejected এর মাঝের অব্জেক্ট। then এবং catch ব্যবহার করে এই Resolve / Rejected এর ফলাফল টাকে ধরা হয়। Promise Resolve হলে সেটা then() এর মধ্যে ধরা পড়ে। আর Rejected হলে catch() ব্লকের মধ্যে ধরে ফেলা হয়। 
+                    </p>
+                </div>
+            </div>
+
+            <!-- q 5 -->
+            <div class="collapse collapse-plus bg-base-100 border border-base-300">
+                <input type="radio" name="my-accordion-3" />
+                <div class="collapse-title font-semibold">5. How clouser work in JavaScript?</div>
+                <div class="collapse-content text-sm">
+                    <p>
+                        <strong>Clouser</strong> তার স্কোপের বাইরের ভ্যারিয়েবলের মান কে মনে রাখে। এই clouser ফাংশন কে কল করা হলে প্রতিবার সে কোনো নির্দিষ্ট ভ্যারিয়েবলের মান টাকে প্রথমবারের মান অনুসারে আপডেট করে। এক্ষেত্রে তাকে ফাংশনের বাইরে থেকেও কল করা যায়। 
+
+                    </p>
+                </div>
+            </div>
+
+
+        </section>
+
+    </main>
+
+
+
+
+
+    <!-- footer section starts -->
+    <footer id="footer-section" class="px-20 py-20 mx-auto flex items-center justify-between mt-32 border-t-2 border-[#FFEBEB]">
+
+        <div class="flex flex-col">
+
+
+            <div class="flex items-center mb-6">
+                <span class="font-semibold text-xl">English</span>
+                <img src="./assets/logo.png" alt="">
+                <span class="tiro-bangla text-xl">জানালা</span>
+            </div>
+
+
+            <h2 class="hind-siliguri text-xl font-medium mb-4">
+                ইংরেজি শিখুন সহজে
+            </h2>
+
+            <h5 class="text-base font-normal">
+                Providing ED-Tech Applications since 2025
+            </h5>
+
+
+
+        </div>
+
+        <div>
+            <p class="font-semibold text-sm mb-4">
+                Follow us
+            </p>
+
+            <div class="flex gap-4">
+                <a href="https://www.facebook.com/" target="_blank">
+
+                    <i class="fa-brands fa-facebook fa-xl"></i>
+
+                </a>
+
+
+                <a href="https://www.youtube.com/@ProgrammingHeroCommunity" target="_blank">
+
+                    <i class="fa-brands fa-youtube fa-xl"></i>
+
+                </a>
+
+                <a href="https://www.instagram.com/" target="_blank">
+
+                    <i class="fa-brands fa-instagram fa-xl"></i>
+
+                </a>
+
+            </div>
+        </div>
+
+    </footer>
+
+
+
+
+
+
+    <script src="./scripts/index.js"></script>
+</body>
+
+</html>
