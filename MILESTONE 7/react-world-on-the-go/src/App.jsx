@@ -9,13 +9,9 @@ const countriesPromise = fetch("https://restcountries.com/v3.1/all").then(
 function App() {
 	return (
 		<>
-			<Suspense fallback={<h3>Nadir vai is going.....</h3>}>
-
-
-				<Countries countriesPromise = {countriesPromise}></Countries>
-			
-            
-            </Suspense>
+			<Suspense fallback={<h3>Nadir vai going ....</h3>}>
+				<Countries countriesPromise={countriesPromise}></Countries>
+			</Suspense>
 		</>
 	);
 }

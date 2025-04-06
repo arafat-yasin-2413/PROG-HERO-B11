@@ -1,10 +1,10 @@
-.country{
-	border: 2px solid tomato;
+.country-card{
 	margin: 10px;
 	padding: 10px;
-	border-radius: 15px;
-
+	border: 2px solid pink;
+	border-radius: 20px;
 }
+
 
 
 .country-visited{
