@@ -6,10 +6,11 @@ function App() {
 	return (
 		<>
 			<header>
+
                 <NavBar></NavBar>
-
-
+                
                 <DaisyNav></DaisyNav>
+
             </header>
 
 
