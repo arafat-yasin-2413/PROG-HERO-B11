@@ -5,7 +5,7 @@ import { Menu, X } from "lucide-react";
 const navigationData = [
 	{
 		id: 1,
-		path: "/home",
+		path: "/",
 		name: "Home",
 	},
 	{
@@ -38,8 +38,8 @@ const NavBar = () => {
     ))
 
 	return (
-		<nav className="flex justify-between mx-10">
-			<span onClick={()=> setOpen(!open)} className="flex border gap-4">
+		<nav className="flex justify-between mx-10 mt-4">
+			<span onClick={()=> setOpen(!open)} className="flex border">
 
                 {
                     open ? 
@@ -48,7 +48,10 @@ const NavBar = () => {
                 }
 
                 {/* small nav links */}
-                <ul className="md:hidden">
+                <ul className={`md:hidden absolute duration-1000 text-black
+                ${open ? 'top-12' : '-top-40'}
+                bg-amber-200 
+                    `}>
                     {
                         links
                     }

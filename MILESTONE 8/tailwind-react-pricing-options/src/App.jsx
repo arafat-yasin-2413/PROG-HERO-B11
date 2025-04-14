@@ -9,7 +9,7 @@ function App() {
 
                 <NavBar></NavBar>
                 
-                <DaisyNav></DaisyNav>
+
 
             </header>
 
