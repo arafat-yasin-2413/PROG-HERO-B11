@@ -38,7 +38,7 @@ const NavBar = () => {
     ))
 
 	return (
-		<nav className="flex justify-between mx-10 mt-4">
+		<nav className="flex justify-between mx-10 mt-4 bg-fuchsia-300">
 			<span onClick={()=> setOpen(!open)} className="flex border">
 
                 {
@@ -58,7 +58,7 @@ const NavBar = () => {
                 </ul>
 
 				
-				<h3>My Navbar</h3>
+				<h3 className="ml-2">My Navbar</h3>
 			</span>
 
             {/* big nav links */}

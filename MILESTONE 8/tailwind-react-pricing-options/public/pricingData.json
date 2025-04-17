@@ -1,48 +1,48 @@
 [
     {
-      "id": 1,
       "name": "Basic Plan",
-      "price": "$29/month",
-      "description": "Perfect for beginners who want to stay fit with essential gym access.",
+      "price": "$29.99/month",
+      "id": 1,
+      "description": "Ideal for individuals who want to stay fit with essential gym access.",
       "features": [
-        "Full gym access (6 AM – 10 PM)",
-        "Cardio & strength equipment",
-        "Locker room access",
-        "1 free personal training session",
-        "Fitness assessment on sign-up",
-        "Access to mobile app"
+        "Access to gym facilities during regular hours",
+        "Unlimited use of cardio equipment",
+        "1 Free personal training session (first month)",
+        "Access to basic fitness classes",
+        "Free Wi-Fi access"
       ]
     },
     {
+      "name": "Premium Plan",
+      "price": "$49.99/month",
+      "popular": true,
       "id": 2,
-      "name": "Standard Plan",
-      "price": "$49/month",
-      "description": "Ideal for regular fitness enthusiasts looking for more flexibility and classes.",
+      "description": "Perfect for individuals who want additional perks and flexibility.",
       "features": [
         "24/7 gym access",
-        "All equipment usage",
-        "Access to group fitness classes",
-        "Sauna & steam room access",
-        "2 free personal training sessions/month",
-        "Fitness assessment & progress tracking",
-        "Unlimited guest passes (weekends only)",
-        "Access to mobile app + nutrition tips"
+        "Unlimited use of all gym equipment",
+        "3 Free personal training sessions per month",
+        "Access to premium fitness classes",
+        "Access to sauna and steam room",
+        "Discount on merchandise and services",
+        "Free towel service"
       ]
     },
     {
+      "name": "Family Plan",
+      "price": "$99.99/month",
       "id": 3,
-      "name": "Premium Plan",
-      "price": "$79/month",
-      "description": "Best for dedicated fitness lovers who want the full experience and personalized training.",
+      "description": "Great for families who want to stay healthy together.",
       "features": [
-        "All benefits from Standard Plan",
-        "Unlimited personal training sessions",
-        "Nutrition & meal planning",
-        "Priority support and booking",
-        "Access to VIP lounge",
-        "1-on-1 goal setting & weekly progress check-ins",
-        "Free gym merchandise (shirt, bottle)",
-        "Exclusive access to special events & workshops"
+        "2 adults and up to 2 children included",
+        "24/7 gym access",
+        "Unlimited use of gym equipment",
+        "Free personal training sessions for each adult",
+        "Access to family fitness classes",
+        "Free childcare during gym visits",
+        "Discounts on family wellness programs",
+        "Free access to family wellness events",
+        "Exclusive family fitness challenges"
       ]
     }
   ]
