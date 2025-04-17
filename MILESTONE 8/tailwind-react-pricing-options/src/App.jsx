@@ -3,6 +3,8 @@ import "./App.css";
 import DaisyNav from "./components/DaisyNav/DaisyNav";
 import NavBar from "./components/Navbar/NavBar";
 import PricingOptions from "./components/PricingOptions/PricingOptions";
+import ResultChart from "./components/ResultsChart/ResultChart";
+import { LineChart } from "lucide-react";
 
 
 
@@ -28,6 +30,10 @@ function App() {
                     <PricingOptions pricingPromise={pricingPromise}></PricingOptions>
 
                 </Suspense>
+
+
+
+                <ResultChart></ResultChart>
                 
             </main>
 		</>
