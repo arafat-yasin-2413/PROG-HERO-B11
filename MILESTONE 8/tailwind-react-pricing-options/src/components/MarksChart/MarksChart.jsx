@@ -4,7 +4,6 @@ import { Bar, BarChart, Legend, Tooltip, XAxis, YAxis } from 'recharts';
 const MarksChart = ({marksPromise}) => {
 
     const marksDataRes = use(marksPromise);
-    
     const marksData = marksDataRes.data
     // console.log(marksData);
 
