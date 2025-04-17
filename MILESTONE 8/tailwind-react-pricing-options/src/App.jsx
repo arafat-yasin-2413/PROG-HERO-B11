@@ -5,10 +5,13 @@ import NavBar from "./components/Navbar/NavBar";
 import PricingOptions from "./components/PricingOptions/PricingOptions";
 import ResultChart from "./components/ResultsChart/ResultChart";
 import { LineChart } from "lucide-react";
+import axios from "axios";
+import MarksChart from "./components/MarksChart/MarksChart";
 
 
 
 const pricingPromise = fetch('pricingData.json').then(res=> res.json())
+const marksPromise = axios.get('marksData.json');
 
 
 function App() {
@@ -31,6 +34,12 @@ function App() {
 
                 </Suspense>
 
+
+                <Suspense fallback={<span className="loading loading-spinner loading-lg"></span>}>
+                    <MarksChart 
+                        marksPromise={marksPromise}
+                    ></MarksChart>
+                </Suspense>
 
 
                 <ResultChart></ResultChart>
