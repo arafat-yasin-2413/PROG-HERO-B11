@@ -38,7 +38,7 @@ const NavBar = () => {
     ))
 
 	return (
-		<nav className="flex justify-between mx-10 mt-4 bg-fuchsia-300">
+		<nav className="flex justify-between mx-10 mt-4 ">
 			<span onClick={()=> setOpen(!open)} className="flex border">
 
                 {
