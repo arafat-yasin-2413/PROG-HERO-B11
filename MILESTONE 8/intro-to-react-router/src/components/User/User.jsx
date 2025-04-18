@@ -3,7 +3,7 @@ import { Link } from 'react-router';
 
 const User = ({user}) => {
 
-    const {id,name, email, phone ,password} = user;
+    const {id,name, email, phone } = user;
 
 
     const userStyle = {
