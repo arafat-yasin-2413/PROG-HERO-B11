@@ -5,17 +5,12 @@ import App from './App.jsx'
 
 
 import {
-    createBrowserRouter,
     RouterProvider,
   } from "react-router";
 
+import { router } from './Routes/routes.jsx'
 
-const router = createBrowserRouter([
-    {
-        path: '/',
-        element: <div>Hello World</div>,
-    }
-])
+
 
 
 
