@@ -9,7 +9,6 @@ const Cousin = ({name, asset}) => {
             {
                 name === 'Tom Tom' && <Special asset={asset}></Special>
             }
-
             {
                 name === 'Jo jooo' && <Friend></Friend>
             }
