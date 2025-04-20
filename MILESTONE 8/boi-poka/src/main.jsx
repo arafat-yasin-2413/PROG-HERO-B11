@@ -7,8 +7,9 @@ import App from './App.jsx'
 import {
     RouterProvider,
   } from "react-router";
+import { router } from './Routes/Routes.jsx';
 
-import { router } from './Routes/routes.jsx'
+
 
 
 

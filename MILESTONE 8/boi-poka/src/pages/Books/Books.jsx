@@ -22,8 +22,11 @@ const Books = ({data}) => {
     // const booksPromise = fetch('booksData.json').then(res=> res.json());
 
 
+    console.log(data);
 
     return (
+
+        
         <div>
             <h1 className='text-3xl text-center p-6 font-medium'>Books</h1>
 
