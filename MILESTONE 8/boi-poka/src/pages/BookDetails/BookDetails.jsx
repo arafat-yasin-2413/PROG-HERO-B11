@@ -2,6 +2,17 @@ import React from "react";
 import { useLoaderData, useParams } from "react-router";
 import { addBookIdToStorage } from "../../utilities/addToStorage";
 
+
+import Swal from 'sweetalert2'
+import withReactContent from 'sweetalert2-react-content'
+const MySwal = withReactContent(Swal)
+
+
+
+import { ToastContainer, toast } from 'react-toastify';
+
+
+
 const BookDetails = () => {
 	const { id } = useParams();
 	// console.log('book id: ', id);
@@ -30,6 +41,16 @@ const BookDetails = () => {
 
     const handleMarkAsRead=(id)=>{
         // console.log('handleMarkAsRead... Id paisi. ', id, 'type: ', typeof id);
+
+
+        // MySwal.fire({
+        //     title: "Good job!",
+        //     text: "You clicked the button!",
+        //     icon: "success"
+        //   })
+
+        toast("Wow so easy!");
+
         addBookIdToStorage(id);
     }
 
@@ -50,6 +71,8 @@ const BookDetails = () => {
 
 			<div>
 				<h2>{bookName}</h2>
+
+                <ToastContainer></ToastContainer>
 
 				<h3>By : {author}</h3>
 
