@@ -5,7 +5,7 @@ import { Link } from "react-router";
 const Book = ({ book }) => {
 	// console.log(book);
 
-	const { bookId,bookName, author, image, rating, category, tags, yearOfPublishing, publisher } = book;
+	const { bookId,bookName, author, image, rating, category, tags, yearOfPublishing, publisher, totalPages } = book;
 
 	return (
 
@@ -42,6 +42,11 @@ const Book = ({ book }) => {
                         By: <span className="font-medium">{author}</span>
                     </p>
 
+                    <p>
+                        Pages: {totalPages}
+                    </p>
+
+                        
                     <div className="border-t border-dashed border-gray-400">
 
                     </div>
