@@ -9,8 +9,8 @@ const Book = ({ book }) => {
 
 	return (
 
-        <Link to={`/bookDetails/${bookId}`} className="border mx-2">
-            <div className="card bg-base-100 shadow-sm border border-amber-200 p-5 my-6">
+        <Link to={`/bookDetails/${bookId}`} className="mx-2 mt-4">
+            <div className="card bg-base-100 shadow-sm border border-amber-200 p-5 ">
                 <figure className="p-4 rounded-2xl bg-slate-100 w-2/3 mx-auto">
                     <img
                         className="w-28 h-48 

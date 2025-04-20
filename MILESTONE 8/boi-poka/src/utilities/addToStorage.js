@@ -29,4 +29,4 @@ const addBookIdToStorage=(id)=>{
 }
 
 
-export {addBookIdToStorage};
+export {addBookIdToStorage, getStoredBooks};
