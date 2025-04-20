@@ -9,11 +9,12 @@ const Book = ({ book }) => {
 
 	return (
 
-        <Link to={`/bookDetails/${bookId}`}>
-            <div className="card bg-base-100 shadow-sm border border-amber-200 p-6">
+        <Link to={`/bookDetails/${bookId}`} className="border mx-2">
+            <div className="card bg-base-100 shadow-sm border border-amber-200 p-5 my-6">
                 <figure className="p-4 rounded-2xl bg-slate-100 w-2/3 mx-auto">
                     <img
-                        className="w-28 rounded-md"
+                        className="w-28 h-48 
+                        rounded-md"
                         src={image}
                         alt={`image of ${bookName}`}
                     />
@@ -31,7 +32,7 @@ const Book = ({ book }) => {
 
                     <h2 className="card-title">
                         {bookName}
-                        <div className="badge badge-secondary">Published: {yearOfPublishing}</div>
+                        <div className="badge badge-secondary text-[12px] py-4">Published: {yearOfPublishing}</div>
                     </h2>
                     <p className="">
                         Publisher: {publisher}
