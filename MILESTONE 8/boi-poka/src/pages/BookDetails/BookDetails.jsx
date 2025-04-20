@@ -1,15 +1,16 @@
 import React from "react";
 import { useLoaderData, useParams } from "react-router";
+import { addBookIdToStorage } from "../../utilities/addToStorage";
 
 const BookDetails = () => {
 	const { id } = useParams();
 	// console.log('book id: ', id);
 
 	const data = useLoaderData();
-	// console.log(data);
+	// console.log('printing',data);
 
 	const singleBook = data.find((book) => book.bookId === parseInt(id));
-	console.log("id: ", id, "book: ", singleBook, "type: ", typeof id);
+	// console.log("id: ", id, "book: ", singleBook, "type: ", typeof id);
 
 	// console.log('type of original id: ', typeof singleBook.bookId);
 
@@ -25,6 +26,16 @@ const BookDetails = () => {
 		totalPages,
 		yearOfPublishing,
 	} = singleBook;
+
+
+    const handleMarkAsRead=(id)=>{
+        // console.log('handleMarkAsRead... Id paisi. ', id, 'type: ', typeof id);
+        addBookIdToStorage(id);
+    }
+
+    
+
+
 	return (
 		// Book Details Container
 		<section className="grid grid-cols-2 gap-3 p-4">
@@ -56,11 +67,11 @@ const BookDetails = () => {
 
                 <div className="flex gap-8">
                     <span className="font-bold">Tag</span>
-                    <p className="flex gap-5">
+                    <div className="flex gap-5">
                         {
                             tags.map((tag,index) => <h5 key={index}>#{tag}</h5>)
                         }
-                    </p>
+                    </div>
                 </div>
 
                 <div className="border-t w-md border-dashed"></div>
@@ -73,8 +84,8 @@ const BookDetails = () => {
                 <p>Rating: <span>{rating}</span></p>
 
                 <div className="flex gap-5 mb-4 mt-4">
-                    <button className="btn btn-primary btn-outline">Read</button>
-                    <button className="btn btn-secondary">Wishlist</button>
+                    <button onClick={()=> handleMarkAsRead(id)} className="btn btn-primary btn-outline">Mark As Read</button>
+                    <button className="btn btn-secondary">Add To Wishlist</button>
                 </div>
 			</div>
 
