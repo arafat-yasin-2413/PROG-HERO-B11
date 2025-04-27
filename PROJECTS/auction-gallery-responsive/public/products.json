@@ -1,0 +1,72 @@
+[
+  {
+    "id": 1,
+    "title": "Vintage Leica M3 Camera",
+    "description": "Classic film camera perfect for collectors and photography enthusiasts.",
+    "image": "https://i.ibb.co.com/VctB8tSL/Bid1-min.png",
+    "currentBidPrice": 2460,
+    "bidsCount":12,
+    "timeLeft": 3,
+    "bidNowButton": "Bid Now"
+  },
+  {
+    "id": 2,
+    "title": "1965 Gibson SG Standard Electric Guitar",
+    "description": "Beautifully crafted wooden acoustic guitar with rich sound quality.",
+    "image": "https://i.ibb.co.com/JwmQbfDj/Bid2-min.png",
+    "currentBidPrice": 2950,
+    "bidsCount": 23,
+    "timeLeft": 5,
+    "bidNowButton": "Bid Now"
+  },
+  {
+    "id": 3,
+    "title": "Original Apple Macintosh 128K (1984)",
+    "description": "High-performance Macbook ideal for work, study, and creativity.",
+    "image": "https://i.ibb.co.com/dwz91w52/Bid3-min.png",
+    "currentBidPrice": 2200,
+    "bidsCount": 17,
+    "timeLeft": 2,
+    "bidNowButton": "Bid Now"
+  },
+  {
+    "id": 4,
+    "title": "Rolex Submariner 16610",
+    "description": "Stylish wristwatch with leather strap and gold detailing.",
+    "image": "https://i.ibb.co.com/Dfv6yTcL/Bid4-min.png",
+    "currentBidPrice": 3450,
+    "bidsCount": 8,
+    "timeLeft": 1,
+    "bidNowButton": "Bid Now"
+  },
+  {
+    "id": 5,
+    "title": "First Edition 'The Great Gatsby' by F. Scott Fitzgerald",
+    "description": "Bestselling poetry book by Rupi Kaur, full of emotional depth.",
+    "image": "https://i.ibb.co.com/k2K1nKyf/Bid6-min.png",
+    "currentBidPrice": 3850,
+    "bidsCount": 18,
+    "timeLeft": 4,
+    "bidNowButton": "Bid Now"
+  },
+  {
+    "id": 6,
+    "title": "Mid-Century Modern Eames Lounge Chair",
+    "description": "Elegant handcrafted wooden chair, ideal for home or office.",
+    "image": "https://i.ibb.co.com/zTvfqcGD/Bid5-min.png",
+    "currentBidPrice": 1450,
+    "bidsCount": 16,
+    "timeLeft": 6,
+    "bidNowButton": "Bid Now"
+  },
+  {
+    "id": 7,
+    "title": "Banksy Original Screen Print",
+    "description": "Colorful wall paint. Thousands years old.",
+    "image": "https://i.ibb.co.com/W4B9mcBb/Bid7-min.png",
+    "currentBidPrice": 4250,
+    "bidsCount": 19,
+    "timeLeft": 3,
+    "bidNowButton": "Bid Now"
+  }
+]

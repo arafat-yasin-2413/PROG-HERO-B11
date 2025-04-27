@@ -1,38 +1,44 @@
 import { createBrowserRouter, RouterProvider } from 'react-router';
-import App from '../App';
-import Favorite from '../Favorite';
+
 import Home from '../pages/Home';
 import MainLayout from '../layouts/MainLayout';
+import Favorites from '../pages/Favorites';
+import About from '../pages/About';
+
+import ErrorPage from '../pages/ErrorPage';
+import PhoneDetails from '../pages/PhoneDetails';
+
+
 
 const router = createBrowserRouter([
     {
         path: '/',
         Component: MainLayout,
-        errorElement: <h2>Error</h2>,
+        errorElement: <ErrorPage></ErrorPage>,
 
         children: [
             
             {
                 path: '/',
+                // index: true,
                 element: <Home></Home>,
                 
             },
 
             {
                 path: '/favorites',
-                element: <Favorite></Favorite>,
+                element: <Favorites></Favorites>,
 
-                children: [
-                    {
-                        path: 'more-nested',
-                        element: <h2>I am inside favorite</h2>,
-                    },
-                ],
             },
 
             {
                 path: '/about',
-                element: <h2>This is about page</h2>,
+                element: <About></About>,
+            },
+
+            {
+                path: '/phone-details',
+                element: <PhoneDetails/>,
             },
         ],
     },
