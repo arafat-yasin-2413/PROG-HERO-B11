@@ -1,15 +1,15 @@
 
-import { signInWithEmailAndPassword } from "firebase/auth";
-import React, { useState } from "react";
+import { sendPasswordResetEmail, signInWithEmailAndPassword } from "firebase/auth";
+import React, {  useRef, useState } from "react";
 import { auth } from "../../firebase.init";
 import { Link } from "react-router";
-import { SiSourceengine } from "react-icons/si";
+
 
 const Login = () => {
 
     const [errorMessage, setErrorMessage] = useState('')
     const [success, setSuccess] = useState(false);
-
+    const emailRef = useRef()
 
     const handleLogin=(e)=> {
         e.preventDefault();
@@ -27,7 +27,13 @@ const Login = () => {
         signInWithEmailAndPassword(auth, email, password)
         .then((result => {
             console.log(result.user);
-            setSuccess(true);
+            if(!result.user.emailVerified) {
+                alert('Please Verify your email address.')
+            }
+            else{
+
+                setSuccess(true);
+            }
 
         }))
         .catch((error=> {
@@ -35,6 +41,26 @@ const Login = () => {
             setErrorMessage(error.message)
         }))
 
+    }
+
+
+    const handleForgetPassword = () => {
+        
+        // console.log(emailRef.current.value);
+        const email = emailRef.current.value;
+        console.log(email);
+
+
+        setErrorMessage('');
+
+
+        sendPasswordResetEmail(auth, email)
+        .then(()=>{
+            alert('Password Reset Email Sent. Check your email.')
+        })
+        .catch((error)=> {
+            setErrorMessage(error.message)
+        })
     }
 
 
@@ -52,7 +78,7 @@ const Login = () => {
 				<h1 className="text-5xl font-bold">Login now!</h1>
 				<form onSubmit={handleLogin} className="fieldset">
 					<label className="label">Email</label>
-					<input name="email" type="email" className="input" placeholder="Email" />
+					<input name="email" type="email" ref={emailRef} className="input" placeholder="Email" />
 					<label className="label">Password</label>
 					<input
 						type="password"
@@ -60,7 +86,7 @@ const Login = () => {
 						className="input"
 						placeholder="Password"
 					/>
-					<div>
+					<div onClick={handleForgetPassword}>
 						<a className="link link-hover">Forgot password?</a>
 					</div>
 					<button className="btn btn-neutral mt-4">Login</button>
