@@ -1,4 +1,4 @@
-import { createUserWithEmailAndPassword, sendEmailVerification } from "firebase/auth";
+import { createUserWithEmailAndPassword, sendEmailVerification, updateProfile } from "firebase/auth";
 import React, { useState } from "react";
 import { auth } from "../../firebase.init";
 import { BiShow } from "react-icons/bi";
@@ -13,6 +13,8 @@ const SignUp = () => {
 	const handleSignUp = (e) => {
 		e.preventDefault();
 
+        const name = e.target.name.value;
+        const photo = e.target.photo.value;
 		const email = e.target.email.value;
 		const password = e.target.password.value;
         const terms = e.target.terms.checked;
@@ -66,6 +68,19 @@ const SignUp = () => {
                     setSuccess(true);
                     alert('Sent you an verification email. Please check your email')
                 })
+
+                // update user profile
+                const profile = {
+                    displayName: name,
+                    photoURL: photo,
+                }
+                updateProfile(auth.currentUser, profile)
+                .then(()=>{
+                    console.log('User Profile Updated');
+                })
+                .catch((error)=> {
+                    console.log(error);
+                })
 			})
 			.catch((error) => {
 				console.log(error);
@@ -78,6 +93,20 @@ const SignUp = () => {
 			<div className="card-body">
 				<h1 className="text-3xl font-bold ">Please Sign Up Now</h1>
 				<form onSubmit={handleSignUp} className="space-y-4">
+					<label className="label">Name</label>
+					<input
+						type="text"
+						name="name"
+						className="input"
+						placeholder="your name"
+					/>
+					<label className="label">Photo URL</label>
+					<input
+						type="text"
+						name="photo"
+						className="input"
+						placeholder="photo URL"
+					/>
 					<label className="label">Email</label>
 					<input
 						type="email"
@@ -85,6 +114,7 @@ const SignUp = () => {
 						className="input"
 						placeholder="Email"
 					/>
+
 					<label className="label">Password</label>
 
 					<div className="relative">
