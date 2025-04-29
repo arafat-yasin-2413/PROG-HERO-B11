@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import { auth } from "../../firebase.init";
 
 const SignUp = () => {
+    const [success, setSuccess] = useState(false);
 	const [errorMessage, setErrorMessage] = useState("");
 
 	const handleSignUp = (e) => {
@@ -14,11 +15,49 @@ const SignUp = () => {
 		// console.log(email, password);
 
 
+        setSuccess(false);
         setErrorMessage('');
+
+
+        // password validation
+        // const passwordRegExp = /(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}/;
+        // if(!passwordRegExp.test(password)){
+        //     setErrorMessage('Password must have one lowercase, one uppercase, one digit and minimum 8 characters long!!')
+        //     return;
+        // } 
+
+
+        const haveDigitExp = /(?=.*\d)/;
+        const haveLowerCase = /(?=.*[a-z])/;
+        const haveUpperCase = /(?=.*[A-Z])/;
+        const haveLength = /^.{8,}$/;
+
+        if(!haveLength.test(password)) {
+            setErrorMessage('Password must be 8 character or long!!')
+            return;
+        }
+
+        else if(!haveDigitExp.test(password)) {
+            setErrorMessage('Password must have at least one Digit!!!');
+            return;
+        }
+
+        else if(!haveLowerCase.test(password)){
+            setErrorMessage('Password must have one Lowercase Letter!')
+            return;
+        }
+
+        else if(!haveUpperCase.test(password)){
+            setErrorMessage('Password must have one Uppercase Letter!')
+            return;
+        }
+
+        
 
 		createUserWithEmailAndPassword(auth, email, password)
 			.then((result) => {
 				console.log(result);
+                setSuccess(true)
 			})
 			.catch((error) => {
 				console.log(error);
@@ -53,8 +92,12 @@ const SignUp = () => {
 					</button>
 				</form>
 
-				{errorMessage && <p className="text-red-400">{errorMessage}</p>}
-			</div>
+				{errorMessage && <p className="text-red-400 font-semibold">{errorMessage}</p>}
+			
+                {
+                    success && <p className="text-green-500 font-semibold">User Has been Created Successfully.</p>
+                }
+            </div>
 		</div>
 	);
 };
