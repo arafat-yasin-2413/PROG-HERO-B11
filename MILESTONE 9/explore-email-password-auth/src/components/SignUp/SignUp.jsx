@@ -1,63 +1,62 @@
 import { createUserWithEmailAndPassword } from "firebase/auth";
 import React, { useState } from "react";
 import { auth } from "../../firebase.init";
+import { BiShow } from "react-icons/bi";
+import { FaEyeSlash } from "react-icons/fa";
 
 const SignUp = () => {
-    const [success, setSuccess] = useState(false);
+	const [success, setSuccess] = useState(false);
 	const [errorMessage, setErrorMessage] = useState("");
+	const [showPassword, setShowPassword] = useState(false);
 
 	const handleSignUp = (e) => {
 		e.preventDefault();
 
 		const email = e.target.email.value;
 		const password = e.target.password.value;
+        const terms = e.target.terms.checked;
 
 		// console.log(email, password);
+        // console.log(terms);
 
+		setSuccess(false);
+		setErrorMessage("");
 
-        setSuccess(false);
-        setErrorMessage('');
-
-
-        // password validation
-        // const passwordRegExp = /(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}/;
-        // if(!passwordRegExp.test(password)){
-        //     setErrorMessage('Password must have one lowercase, one uppercase, one digit and minimum 8 characters long!!')
-        //     return;
-        // } 
-
-
-        const haveDigitExp = /(?=.*\d)/;
-        const haveLowerCase = /(?=.*[a-z])/;
-        const haveUpperCase = /(?=.*[A-Z])/;
-        const haveLength = /^.{8,}$/;
-
-        if(!haveLength.test(password)) {
-            setErrorMessage('Password must be 8 character or long!!')
+        if(!terms) {
+            setErrorMessage('Please Accept our Terms & Conditions.');
             return;
         }
 
-        else if(!haveDigitExp.test(password)) {
-            setErrorMessage('Password must have at least one Digit!!!');
-            return;
-        }
+		// password validation
+		// const passwordRegExp = /(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}/;
+		// if(!passwordRegExp.test(password)){
+		//     setErrorMessage('Password must have one lowercase, one uppercase, one digit and minimum 8 characters long!!')
+		//     return;
+		// }
 
-        else if(!haveLowerCase.test(password)){
-            setErrorMessage('Password must have one Lowercase Letter!')
-            return;
-        }
+		const haveDigitExp = /(?=.*\d)/;
+		const haveLowerCase = /(?=.*[a-z])/;
+		const haveUpperCase = /(?=.*[A-Z])/;
+		const haveLength = /^.{8,}$/;
 
-        else if(!haveUpperCase.test(password)){
-            setErrorMessage('Password must have one Uppercase Letter!')
-            return;
-        }
-
-        
+		if (!haveLength.test(password)) {
+			setErrorMessage("Password must be 8 character or long!!");
+			return;
+		} else if (!haveDigitExp.test(password)) {
+			setErrorMessage("Password must have at least one Digit!!!");
+			return;
+		} else if (!haveLowerCase.test(password)) {
+			setErrorMessage("Password must have one Lowercase Letter!");
+			return;
+		} else if (!haveUpperCase.test(password)) {
+			setErrorMessage("Password must have one Uppercase Letter!");
+			return;
+		}
 
 		createUserWithEmailAndPassword(auth, email, password)
 			.then((result) => {
 				console.log(result);
-                setSuccess(true)
+				setSuccess(true);
 			})
 			.catch((error) => {
 				console.log(error);
@@ -78,26 +77,58 @@ const SignUp = () => {
 						placeholder="Email"
 					/>
 					<label className="label">Password</label>
-					<input
-						type="password"
-						name="password"
-						className="input"
-						placeholder="Password"
-					/>
+
+					<div className="relative">
+						<input
+							type={showPassword ? "text" : "password"}
+							name="password"
+							className="input pr-12"
+							placeholder="Password"
+						/>
+
+						<span
+							onClick={() => {
+								setShowPassword(!showPassword);
+							}}
+							className="absolute p-1 mt-1 -ml-10 border border-gray-300 rounded-md hover:bg-indigo-500 hover:text-white"
+						>
+							{showPassword ? (
+								<FaEyeSlash size={20}></FaEyeSlash>
+							) : (
+								<BiShow size={20}></BiShow>
+							)}
+						</span>
+					</div>
+
 					<div>
 						<a className="link link-hover">Forgot password?</a>
 					</div>
+
+					<label className="label text-gray-600 font-semibold ">
+						<input
+							type="checkbox"
+							name="terms"
+							className="checkbox"
+						/>
+
+						Accept Terms & Conditions
+					</label>
+
 					<button className="btn w-full hover:bg-black hover:text-white hover:font-bold mt-4 ">
 						Sign Up
 					</button>
 				</form>
 
-				{errorMessage && <p className="text-red-400 font-semibold">{errorMessage}</p>}
-			
-                {
-                    success && <p className="text-green-500 font-semibold">User Has been Created Successfully.</p>
-                }
-            </div>
+				{errorMessage && (
+					<p className="text-red-400 font-semibold">{errorMessage}</p>
+				)}
+
+				{success && (
+					<p className="text-green-500 font-semibold">
+						User Has been Created Successfully.
+					</p>
+				)}
+			</div>
 		</div>
 	);
 };
