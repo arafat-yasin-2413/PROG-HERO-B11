@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import { auth } from "../../firebase.init";
 import { BiShow } from "react-icons/bi";
 import { FaEyeSlash } from "react-icons/fa";
+import { Link } from "react-router";
 
 const SignUp = () => {
 	const [success, setSuccess] = useState(false);
@@ -118,6 +119,8 @@ const SignUp = () => {
 						Sign Up
 					</button>
 				</form>
+
+                <p>Already have an account ? Please <Link to="/login" className="text-blue-500 underline">Login</Link></p>
 
 				{errorMessage && (
 					<p className="text-red-400 font-semibold">{errorMessage}</p>
