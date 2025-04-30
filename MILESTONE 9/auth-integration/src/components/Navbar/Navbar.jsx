@@ -1,24 +1,33 @@
-
 import { Link, NavLink } from "react-router";
-import './Navbar.css'
+import "./Navbar.css";
 import { AuthContext } from "../../contexts/AuthContext";
 import { use } from "react";
 
-
-
 const Navbar = () => {
+	// const userInfo = use(AuthContext)
+	// console.log('nav', userInfo);
 
-    // const userInfo = use(AuthContext)
-    // console.log('nav', userInfo);
+	const { user, signOutUser } = use(AuthContext);
+	console.log(user);
 
-    const {user} = use(AuthContext);
-    console.log(user)
-   
+	const handleSignOut = () => {
+		signOutUser()
+			.then(() => {
+				console.log("Sign Out Successfull.");
+			})
+			.catch((error) => {
+				console.log(error);
+			});
+	};
 	const links = (
 		<>
 			<li><NavLink to="/">Home</NavLink></li>
-            <li><NavLink to="/login">Login</NavLink></li>
-            <li><NavLink to="/register">Register</NavLink></li>
+			<li><NavLink to="/login">Login</NavLink></li>
+			<li><NavLink to="/register">Register</NavLink></li>
+			{user && <>
+                <li><NavLink to="/orders">Orders</NavLink></li>
+                <li><NavLink to="/profile">Profile</NavLink></li>
+            </>}
 		</>
 	);
 
@@ -38,7 +47,6 @@ const Navbar = () => {
 							viewBox="0 0 24 24"
 							stroke="currentColor"
 						>
-						
 							<path
 								strokeLinecap="round"
 								strokeLinejoin="round"
@@ -61,10 +69,14 @@ const Navbar = () => {
 				<ul className="menu menu-horizontal px-1">{links}</ul>
 			</div>
 			<div className="navbar-end">
-
-                {
-                    user ? <a className="btn">Sign Out</a> : <Link to="/login">Login</Link>
-                }
+				{user ? 
+					<>
+                        <span>{user.email}</span>
+                        <a onClick={handleSignOut} className="btn">Sign Out</a>
+                    </>
+				    : 
+					<Link to="/login">Login</Link>
+				}
 			</div>
 		</div>
 	);
