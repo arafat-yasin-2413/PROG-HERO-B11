@@ -4,10 +4,11 @@ import Header from '../components/Header';
 
 const HomeLayout = () => {
     return (
-        <div>
+        <div className='font-poppins'>
             <header>
                 <Header></Header>
             </header>
+
 
             <main>
                 <section className="left-nav">
